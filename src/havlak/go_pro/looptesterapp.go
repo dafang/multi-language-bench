@@ -21,9 +21,9 @@
 package main
 
 import "fmt"
-import "./basicblock"
-import "./lsg"
-import "./havlakloopfinder"
+import "havlak/go_pro/basicblock"
+import "havlak/go_pro/lsg"
+import "havlak/go_pro/havlakloopfinder"
 
 //======================================================
 // Testing Code

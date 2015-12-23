@@ -12,24 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-6.out: basicblock.6 lsg.6 havlaklookfinder.6 looptesterapp.6
-	6l looptesterapp.6
 
-basicblock.6: basicblock.go
-	6g basicblock.go
-
-lsg.6: lsg.go
-	6g lsg.go
-
-havlaklookfinder.6: havlakloopfinder.go
-	6g havlakloopfinder.go
-
-looptesterapp.6: looptesterapp.go
-	6g looptesterapp.go
-
+build:
+	GOPATH=$(shell pwd)/../../../:$(shell echo $(GOPATH)) go build looptesterapp.go
 
 run: 
-	./6.out
+	./looptesterapp -cpuprofile=havlak1.prof
 
 clean:
 	rm -f *6 ./6.out
