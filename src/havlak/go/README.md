@@ -1,9 +1,5 @@
 How to build:
 
-GOPATH=`pwd`/../../../:$GOPATH go build looptesterapp.go
+Run under this folder: `make build`
 
-Then:
-./looptesterapp -cpuprofile=havlak1.prof
-
-To run this test.
-
+Then: `make run`
